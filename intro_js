@@ -1,0 +1,333 @@
+// javascript - In programming javascript treet like brain of body , where user value store and how work in backend its
+//all about in javscript , we made static  website through the html , css and javascript 
+//js useful for make dynamic website.
+
+// Variables: Variables are used to store data in programming. 
+// They can hold different types of values, such as numbers, strings, or booleans.
+
+// some IMportant shortkety of VS Cods 
+// shift+Alt + Arrow(up/down)     =  copy line             
+// Caps-lock+Alt + Arrow(up/down) =  moving line down             
+
+
+// prImitive datatype in js  NNSSBBU
+// in javascript bascially 7 types of primitive datatype like
+// 1. Number.   = 1,3,4,5
+// 2. Null.     = standloan value / nothing 
+// 3. Symbol.   == for uniquness 
+// 4. strings.  == "" ,''
+// 5. boolean.  = true/false
+// 6. bigInt.    = 2 power 53 / big numric
+// 7. Undeifiend.  = varial define but value is not assine.
+
+
+// Non-primitive data types
+// object
+// Arrays
+
+// strings
+
+//string Mathod
+// String length  = count 1
+// String slice() = for break strings (star , end ) end is not includes
+// String substring() = :( start ,end ) end not include and we can not use negative value in this mathod
+// String substr()  = (start , lenght)
+// String replace()
+// String replaceAll()
+// String toUpperCase()
+// String toLowerCase()
+// String concat()
+//String trim()
+// String trimStart()
+// String trimEnd()
+// String padStart()
+// String padEnd()
+// String charAt()
+// String charCodeAt()
+// String split()
+
+// strings convert in Arrays throw the split() mathod
+// const mystr1="hello"
+// console.log(mystr1.split());
+
+// const str1 ="Jai"
+// const str2="shree"
+// const str3="ram"
+// console.log(str1.concat("-"+str2+"-"+str3));
+
+const str4="hello"
+console.log(str4.padStart(9, "hey-"));
+// console.log(str4.charCodeAt(str4));      // 104 
+// console.log(str4.split());                  // [ 'hello' ]
+//slice() : for break strings (star , end ) end is not includes
+//substr() : (start , lenght)
+//substring() :( start ,end ) end not include and we can not use negative value in this mathod
+
+
+// Arrays mathod
+//lenght
+// tostring()- converting to arrys in string 
+// pop()      - Removing last charater in array
+//push()      - add charater in last of arrays // add element in last and return totel length of Arrays 
+//shift()     - removing in frist elemenmt and return it.
+//unshift()   - add of charater in start
+//slice()     - 
+//splice()   - (The first parameter[position in index] , second[how many element should be removed] , new element add)
+//join ()   - Adds all the elements of an array into a string, separated by the specified separator string. // typeof Strings  
+//delete()
+
+// let man= ["ironman","spiderman","shaktiman","gentalman"]
+// let test=man.indexOf("gentalman")
+// console.log(test);  // 3
+
+// let name= ["smart","tech","seo"]
+// let name2=name.splice(1 ,2 ,"seo", "tech")
+// console.log(name);
+
+// const arr1= ["Marvels" , "DC" , "Bollywood"]
+// // console.log(arr1.length);
+// // console.log(arr1.toString());
+
+
+// const arr2= ["Marvels","DC","Bollywood"]
+// // console.log(arr1.length);
+// // console.log(arr1.toString());
+// // console.log(arr2.pop());
+// // console.log(arr2);
+//  const arr3=arr2.pop()
+//  console.log(arr2);
+//  console.log(arr3);
+
+// const arr4= ["Marvels","DC","Bollywood"]
+// const arr5= arr4.push("Tollywood")  
+// console.log(arr5);
+// console.log(arr4);
+
+// //  const arr5= ["Marvels","DC","Bollywood"]
+// // //  console.log(arr5.shift());   
+// // //  console.log(arr5); 
+// //  const arr6 =arr5.shift()
+// //  console.log(arr6);
+// //  console.log(arr5);
+
+//   const arr7= ["Marvels","DC","Bollywood"]
+//     //   console.log(arr7.unshift("Hollywood"));
+//     //   console.log(arr7);
+// const arr8 =arr7.unshift("Hollywood")
+// console.log(arr7);
+// console.log(arr8);
+
+
+// const arr9=["DC","M","H" , "W"]
+// console.log(typeof arr9);
+// const arr10=arr9.join()
+// console.log(typeof arr10);
+
+
+// splice() and slice() mathod
+
+// const arr11 =["Caption","Thor","Ironman", "loki" ,"Antman" , "spiderman" , "wanda" ,"Dr.strange"]
+// // console.log(arr11.slice( 2, 5));
+
+//   const arr12 = arr11.splice( 2 , 4 , "A" , "b" , "c")  // ( 2index value , to 4 value counting , and replace giving through element )
+// //   console.log(arr12);
+//   console.log(arr11);
+
+
+// const arr13= [ "name" ,"class" , "subject."] 
+// console.log(arr13.delete); // 
+
+
+// map = applying a function to each one of the elements of the first array.
+//  const arr14=[ 2 ,5 ,6 ,8]
+// const arr15=arr14.map(item=>item*4)  
+// console.log(arr15);
+
+//  const number = [2,4,6,8]
+
+//  const squre=number.map(( num)=> Math.sqrt(num))
+//  console.log(squre);
+
+
+
+// objects in javascript;- object are collections off keys/name & values in curley bracket.
+// like 
+
+//  const obj = {
+//   UserName:"Hello",   
+//   userId:"Special",
+//   userEmail:"hello@google.com",
+//   userwinningAmout:5000,
+//  }
+// //  console.log(obj);
+// //  console.log(obj.UserName);
+// // obj.UserName="hey" // we are updating values of objects 
+// // console.log(obj.UserName);  // hey
+// // console.log(obj);
+// console.log(obj);
+// console.log(obj.userwinningAmout);
+
+// Object.freeze(obj) // for lock of objects 
+// obj.userEmail="hey@google.com"
+// console.log(obj.userEmail);  // the userEmail is not change because object.freeze 
+                               //mathod are locked of enetire of object 
+
+// const user= new Object()
+// console.log(typeof user);
+
+// in case we have a empty object ,then we can pass key&values of another ways like- 
+
+// const newUser={}   // we have a empty object 
+// newUser.name="hello"
+// newUser.ID=45
+// newUser.loginToday=false
+
+// console.log(newUser);
+
+ // we can create one object inside another object.... and again another object 
+// const user = {       
+//   userID: 45,
+//   userName: {
+//     userFullName: {
+//       userFirstName: "hello",    
+//       userLastName: "saini"
+//     }
+//   }
+// }
+// console.log(user.userName.userFullName.userFirstName); // this is possible
+
+// const obj1={
+//   a:"Apple",
+//   b:"Book"
+// }
+// const obj2={
+//   c:"cat",
+//   d:"dog"
+// }
+// const obj3 ={ obj1 , obj2}
+// const obj3= Object.assign( {},obj1,obj2) 
+// const obj3={...obj1, ...obj2 }   // ...spread oprator
+// console.log(obj3);
+
+//  const obj = {
+//   UserName:"Hello",   
+//   userId:"Special",
+//   userEmail:"hello@google.com",
+//   userwinningAmout:5000, 
+//  }
+// //  console.log(Object.keys(obj));   // print  keys/names of objects
+// //  console.log(Object.values(obj));  // print  values of objects
+// //  console.log(Object.entries(obj));
+//  console.log(obj.hasOwnProperty("userId"));
+
+
+// object de-structure 
+
+// const courseDetials={
+//   courseName:"Web Developer",
+//   price:10000
+// }
+// const{courseName:course}=courseDetials 
+// // console.log(courseDetials.courseName);  
+// console.log(course);
+
+//json Api
+// {
+//   "name":"hello",
+//   "course":"Javascript",
+//   "price":"10000",
+// }
+
+
+
+
+/// Functions in java script 
+
+
+// function myf1(){
+//   console.log("this is me!");
+// }
+// myf1()
+
+// function AddTwoNumber(number1 , number2){
+//    console.log(number1+number2);
+// }
+// AddTwoNumber( 4 ,6)
+// AddTwoNumber(4,"a")
+
+// function AddTwoNumber(num1,num2){
+//  return num1+num2
+// }
+// console.log(AddTwoNumber(5,6))
+
+
+// functions with if else if statement(important)
+
+// function myUser(username){
+//   if (username === undefined) {
+//     console.log("please enter your name");
+//     return
+//   }
+//   if (username === " ") {      // if username equal to empty string 
+//     console.log("please enter your valid name");
+//     return
+//   }
+//   else {
+//     console.log("congrats you are login,most welcome");
+//     return
+//   }
+//   return `${username} loggin here`
+// }
+// console.log(myUser(""));  // empty 
+// console.log(myUser());    // this is undefiend 
+// console.log(myUser("hello"));
+
+
+
+
+// we can add of multipal numbers in Array threw the function in spread oprator
+// function addNumber(...num){
+//     return num
+// }
+// console.log(addNumber(100,200,300 , 400));
+
+
+// function addThree(num1 , num2 ,num3) {
+//     return num1+num2+num3
+// }
+// const addNum=[12,24,36]
+// console.log(addThree(...addNum));
+
+
+// how we can pass object in functions and run js
+// const user ={
+//     name:"hello",
+//     score:100
+// }
+// function myDetials(user){  
+//     console.log(`this is ${user.name} and ${user.score} is score`);
+// }
+//  myDetials(user)
+
+
+// const name={
+//     firstName:"hello",
+//     lastName:"singh"
+// }
+// function  myf(name) {
+// return `${name.firstName} is my first name and ${name.lastName} is my last name!`
+// }
+// console.log(myf(name))
+
+
+
+// const obj1={
+//     name:"hey",
+//     number:45
+// }
+// obj1.age=29+30 
+// console.log(obj1);
+
+
+
+
