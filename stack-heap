@@ -1,0 +1,47 @@
+//******************* */ stack-heap memorry
+
+// stack = > Primitive data // original variable ki copy          // Deep copy 
+// heap  = > non-primitive data // original ka refrence milta h.  // shallow copy
+
+// example stack
+ 
+// let name="Ram"
+// let UpdatedName= name
+// console.log(name);  
+// console.log(UpdatedName);
+
+// UpdatedName ="shyam"
+// console.log(name);
+// console.log(UpdatedName);
+
+
+// example heap
+
+// const obj={
+//   name:"hello",
+//   age:45
+// }
+// // console.log(obj.name);
+
+// const newObj= obj
+
+// newObj.name="hey"
+
+// console.log(obj.name);    // hey 
+// console.log(newObj.name); // hey
+
+
+//++++++++++++++++++++++++
+let myobj= {
+    value:45
+  }
+  
+  const mynewobj=myobj
+  
+  console.log(myobj.value);
+  console.log(mynewobj.value);
+  
+  mynewobj.value=18
+  
+  console.log(myobj.value);
+  console.log(mynewobj.value);
