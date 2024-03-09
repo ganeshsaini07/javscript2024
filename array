@@ -1,0 +1,307 @@
+// Arrays Important mathod    
+// [Arrays ka typeof always OBJECT host h]
+
+// .lenght      // return Arrays lenght
+//toString()   // in this mathod we convert arrays to strings// join()  
+//pop()       // we remove last element of arrays and return it through the mathod
+// push()      // we add element last of the arrays and return new length of array    
+//shift()       // removing in frist elemenmt and return it.
+//unshift()    // add of charater in start
+//join() // Adds all the elements of an array into a string, separated by the specified separator string.//typeof Strings
+//splice() //(The first parameter[position in index] , second[how many element should be removed] , new element add)
+//slice()
+//concat() //we  can add 2 & more arrays through the concat mathod
+
+//sort()   // this method wil be create Alphabately sort of array like example-  sort-to-long
+
+// includes()  // true // false / datatype = > booleain
+
+// flat() // if i have a multipal array in one arrys in this case if i want one converted arrays then we can use flat(infinity)
+ 
+// const value = [ 2 ,4 ,6 ,[8, 10 , [12,14] ,[16,18]] , 20]
+// console.log(value.flat(Infinity));   // [ 2 ,4 ,6 ,8, 10 ,12,14 ,16,18 ,20]
+
+// Importante
+// Arrays are non-primitive data types so arrays are store in heap memorry and
+// arrays are create shallo copies it mins when we apply any mathod of arrays in these case hume original arrays ka refrence 
+// milta h , matlb original arryas ki valure change ho jati h.
+
+// primitive data type always make deep copies
+
+const myNewarr=new Array(1,2,3,4)
+
+// const arr1=[]   // empty arrays
+// arr1.push("hey" ,"hello" , "Me!")  // we can use also mathod of unshift()  matthod 
+// console.log(arr1);    //     
+
+
+const Mixed=["Ironman" , "Thor" , "Spidy" ,45 , this ] // mixed data stored //possible
+
+
+// const Marvels=["Ironman" , "Thor" , "Spidy" ,"Strange"]
+
+// console.log(Marvels[0]);   // Ironman
+
+// console.log(typeof Marvels);   // object
+// console.log(Marvels.length);
+// console.log(Marvels.toString());
+// console.log(typeof Marvels.toString());   // type of = string
+// const newMarvels=Marvels.toString()
+// console.log(newMarvels);    
+
+// console.log(Marvels.pop())
+// const newMarvels1=Marvels.pop()  // remove last element from the original array and return it
+// console.log(newMarvels1); 
+// console.log(Marvels);  
+
+// console.log(Marvels.push("Antman")); // it this case input are always input are lenght include new array // 5
+
+// const newMarvels2=Marvels.push("Antman")
+// console.log(Marvels);
+
+// console.log(Marvels.unshift("vision"));
+// const newMarvels3=Marvels.unshift("vision")
+// console.log(newMarvels3);   // return length
+// console.log(Marvels);  // return new arrya with new element 
+
+// console.log(Marvels.shift());
+// const newMarvels4=Marvels.shift()
+// console.log(newMarvels4);
+
+
+// console.log(Marvels.join("-"));   // in this case input are always a string
+
+
+//+++++++++++ splice()&slice() mathod +++++++++++++
+
+// // slice() mathod is not change original arrya but splice mathod changes origianl arrays
+
+// const Marvels=["Ironman" , "Thor" , "Spidy" ,"Strange"]
+// // console.log(Marvels.slice(0,3));                              
+// const upadteMarvels=Marvels.splice(0,2,"antman","vision")  // ()
+// console.log(upadteMarvels);   // [ 'Ironman', 'Thor' ]
+// console.log(Marvels);    //[ 'antman', 'vision', 'Spidy', 'Strange' ]
+
+
+// slice()  and splice() 
+
+// // slice() mathod is not change original arrya but splice mathod changes origianl arrays
+
+// const arr= [ "45" , "18" ,"7" ,"1"]
+  
+// console.log(arr.slice(1,3));  // [ '18', '7' ]
+
+// console.log(arr); // [ '45', '18', '7', '1' ]  // original array me koi change nhi hota h
+
+// console.log(arr.splice(1,3));  // [ '18', '7', '1' ]   // An array containing the elements that were deleted.
+
+// console.log(arr);  // [ '45' ]
+
+
+
+// // concat           
+// const Marvels=["Ironman","Thor","captionAmerica" ,"Spiderman" ,"Dr.strange","Vision","Antman"]
+// const DC=["Batman" , "Superman" ,"Aquaman" ,"Sazam","The flash", "Wonderwomen" ]
+// const bolly=["krish" , "shaktiman"]
+// console.log(Marvels.concat(DC,bolly));   // we  can add 2 & more arrays through the concat mathod
+// // console.log(typeof Marvels.concat(DC)); 
+// // console.log(Marvels.delete("Antman"));
+
+
+
+// sort()mathod = this method wil be create Alphabately sort of array like example-  sort-to-long
+// const Arr1=["March", "Jan", "Feb", "Dec" ]
+// console.log(Arr1.sort());                  // [ 'Dec', 'Feb', 'Jan', 'March' ]
+// console.log(typeof Arr1.sort());
+
+// const Arr2=[32 , 100 , 1009 , 9 ,5] // check the frist character of element 
+// console.log(Arr2.sort());
+
+
+
+
+
+// const Days= ["sunday" ,"monday" , "tuesday"]
+// const Month=["jan" , "feb" , "march"]
+
+// console.log(Days.push(Month));
+// console.log(Days);   // [ 'sunday', 'monday', 'tuesday', [ 'jan', 'feb', 'march' ] ]
+
+// console.log(Days.length);  // 4
+
+// console.log(Days[3][2]);  // march
+
+
+// const Days = ["sunday", "monday", "tuesday"]
+// const Month = ["jan", "feb", "march"]
+
+
+// const Days_month = Days.concat(Month)
+// // console.log(Days_month);  // [ 'sunday', 'monday', 'tuesday', 'jan', 'feb', 'march' ]
+
+// console.log([...Days, ...Month]);
+
+// const numbers = [1, 3, 4, [4, 5], 4, [9, 0, 5, [4, 7, 0]], 3]
+// console.log(numbers.flat(Infinity));
+
+
+// const a= "45"
+// const b= "7"
+// const c="18"
+
+// console.log(Array.of(a,b,c));  // [ '45', '7', '18' ]
+
+
+// const name= "hello"
+
+// console.log(Array.isArray(name)); // false // because "hello"  is string not array 
+// // but if i need to convert array then---
+ 
+// console.log(Array.from(name));  // [ 'h', 'e', 'l', 'l', 'o' ]
+
+// console.log(Array.from({name:"hello"}));   // [] emepty array
+
+
+
+// Q. 1  update me DC superherioes list through the varibales, const DC=["Batman" ,"Superman","Thor","Spiderman" ,"Ironman"] 
+
+// Marvels=["Ironman","Thor","captionAmerica" ,"Spiderman" ,"Dr.strange","Vision","Antman"]
+//      DC=["Batman" , "Superman" ,"Aquaman" ,"Sazam","The flash", "Wonderwomen" ]
+
+// /*Ans.*/    const DC=["Batman" ,"Superman","Thor","Spiderman" ,"Ironman", "Wonderwomen"]      // this is wrong DC team
+// const newDC=DC.splice(2,3,"Aquman" ,"Sazam" ,"The Flash")
+// // console.log(newDC);
+// console.log(DC);    
+
+
+//Q2.  Show me a example of converting array into string , string into arrays
+/*Ans.*/ 
+        // array to String  = we have two type of converting arrays to strings
+//         const myArr1=["this"," is"," me!"]
+// // /*(A)*/  console.log(myArr1.toString());      //this, is, me!
+// //                console.log(typeof myArr1.toString()); // string
+
+//    /*(B)*/      console.log(myArr1.join());          
+//                 console.log(typeof myArr1.join());     // string   
+
+  
+    //    //string into arrays
+    //    const str1="Hello"
+    //    console.log(str1.split());           // ['Hello']
+    //    console.log(typeof str1.split());    // object
+
+
+
+// ++++++++++++++++JavaScript Array Iteration+++++++++++++++++++ //
+
+  //  forEach()
+  //  map()
+  //  filter()
+  //  reduce()
+  // indexOf()
+  // Array.from()
+  // includes()
+  // Spread (...)
+    
+  //Array.prototype.map()  // A function to execute for each element in the array
+
+  // const arr1=[1,4,9,16]
+  // const map1=arr1.map((Element)=>Element*2)
+  // console.log(map1);
+  
+
+
+ this and arrow function
+
+
+
+
+
+
+// this make always current context 
+// Arrow function ke ander this nhi
+// current context ko refer krne ke liye this ka use kiya jata h 
+//matlab ek scope ke ander jitne be variable h unko Access krne ke liye kiya jata h this ka use kiya jata  
+// user ={ }  // ye ek scope h
+
+// const user={
+//     userName:"hello",
+//     Price:999,
+//     welcome:function () {
+//         console.log(`${this.userName} ,welcome`);
+//         console.log(this);
+//     }
+// }
+// console.log(userName);   // username is not define beacuse we have print this varible outside of block scope 
+// user.welcome() // hello , welcome
+// user.userName="hey"
+// user.welcome()  // hey , welcome
+
+// console.log(this);   // {} empty object //when we can use this outside off block scope then
+// we have not found any context in globle so in this case we found {} empty object   
+// sabse jayda global object= window object 
+
+
+// this for function :- we can not use this mathod in function we can use only object 
+//  function myf() {
+//     // console.log(this);
+//     const name="hello"
+//     // console.log(this.name);  // undefined
+//     console.log(`${this.name}`); // undefined
+//  }
+//  myf()
+
+// const myObj= function () {
+//     let name="hello"
+//     console.log(this.name); 
+// }
+// myObj()  // undefined 
+
+
+// const myObj=  () => {
+//     let name="hello"
+//     // console.log(name);
+//     console.log(this.name); 
+//     // console.log(this);
+// }
+// myObj()  // undefined
+
+
+
+// Arrow Function
+
+// 1 type
+// const addnum=(num1 ,num2 )=>{
+//     return num1 +num2
+// }
+// console.log(addnum(9,6))
+
+
+// 2 type // implicit return
+// const addnum=(num1 ,num2 )=> num1 +num2
+
+// console.log(addnum(9,6))
+
+
+// // 3 type
+// const addnum=(num1 ,num2 )=> (num1 +num2)
+
+// console.log(addnum(9,6))
+
+// // Note:- curley brackt {} , then return use krna hoga 
+// // paranthasis () , return ki need nhi h
+
+
+// const myArr=[ 3,4,5,6]
+// myArr.forEach(function () {} )
+// myArr.forEach(()=> {} )
+// myArr.forEach(()=> () )
+
+
+
+
+
+
+
+
+
