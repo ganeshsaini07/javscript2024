@@ -1,0 +1,142 @@
+
+
+//// Number  , Maths , /// Dates  +++++++++++++++++++++++++++++++++++++++++++++++
+
+
+// toString()
+// toFixed(1)  // Number of digits after the decimal point. Must be in the range 0 - 20, inclusive. // string
+// toPrecision()  // purify value  // precisie value 
+// toLocalString('en-IN')
+// toExponential()
+
+// let VAL=100
+// // console.log(VAL.toFixed(1)); // 100.0
+// // console.log(VAL.toFixed(2)); // 100.00
+
+// let VAL1=100.457
+// console.log( VAL1.toFixed(1)); // 100.5
+// console.log( VAL1.toFixed(2)); // 100.46
+
+
+// let val3=24.48945
+// console.log(val3.toPrecision(3));// 24.5 // purify value  // precisie value
+
+// let val4=124.48945
+// console.log(val4.toPrecision(3));// 124  // precisie value
+
+// let val5=124.78945
+// console.log(val5.toPrecision(3));// 125 // purify value  // precisie value
+
+// let val6=1128.78945
+// console.log(val6.toPrecision(3));// 1.12e+3  // precisie value
+
+// let val6=1124.78945
+// console.log(val6.toPrecision(5));// 1124.8  // precisie value
+
+// let val7 = 234.4435
+// console.log(val7.toExponential());  // 2.344435e+2
+// console.log(val7.toExponential(1));  // 2.3e+2
+// console.log(val7.toExponential(2));  // 2.34e+2
+
+
+
+
+
+
+// Math()
+// Math.random()  // this mathod jenerated random value of 0 to 1  
+//
+
+// console.log(Math);
+
+// console.log(typeof Math); // object
+ 
+// console.log(Math.random());
+
+// console.log(Math.abs(-5));
+
+// console.log(Math.round(8.4));  // 8 
+// console.log(Math.round(8.6));  // 9
+
+// console.log(Math.floor(4.7));  // 4
+// console.log(Math.floor(4.3));   // 4
+
+// console.log(Math.ceil(5.7));  // 6 
+// console.log(Math.ceil(5.2));   // 6
+
+// console.log(Math.max(3,5,76 ,2));
+// console.log(Math.min(3,5,76 ,2));
+
+// console.log(Math.random()*10+1); 
+
+// let value=25
+// let valueNew= Math.sqrt(value)
+// console.log(valueNew);  // 5
+
+
+// const max=10
+// const min=5
+
+// console.log(Math.floor((Math.random()*(max - min + 1)) + min));
+
+
+/// Dates  +++++++++++++++++++++++++++++++++++++++++++++++
+
+// Months start from zero in JS
+
+const myDate= new Date()
+
+console.log(myDate);
+
+console.log(typeof myDate);  // object
+
+// console.log(myDate);   // 2024-01-19T10:47:14.413Z  
+// console.log(myDate.toString());  // Fri Jan 19 2024 16:15:10 GMT+0530 (India Standard Time)
+// console.log(myDate.toDateString());   // Fri Jan 19 2024
+// console.log(myDate.toISOString());  // 2024-01-19T10:51:33.586Z
+
+// Q / decleartions a one date
+
+// in programming monts are start form 0 to 11
+
+// const createdNewDate= new Date( 2024 , 0 , 19 , 4, 35 )
+// console.log(createdNewDate.toDateString());  //Fri Jan 19 2024
+// console.log(createdNewDate.toLocaleString())  // 1/19/2024, 4:35:00 AM
+
+
+// const NewTodayDate = new Date("2024-1-20")  // (yy-mm-dd)
+// // console.log(NewTodayDate.toDateString());
+// console.log(NewTodayDate.getTime());  // Returns the stored time value in milliseconds since midnight, January 1, 1970 UTC.
+
+
+// const newDate=new Date("1-20-2024")
+// console.log(newDate);
+// console.log(newDate.toDateString());
+
+
+// let TimeStamp = Date.now()  // 
+// // console.log(TimeStamp); // Returns the number of milliseconds elapsed since midnight, January 1, 1970 Universal Coordinated Time (UTC).
+// console.log(TimeStamp.getTime());
+
+
+
+// // console.log(Date.now());  // 1705733870415
+// // console.log(Date.now()/1000);  // 1705733903.046
+
+// console.log(Math.floor(Date.now()/1000));  // 1705734130
+
+
+
+// const newDate= new Date()   
+// console.log(newDate.getDate()); // 20 
+// console.log(newDate.getDay()); // 6 , saturday ,6
+// console.log(newDate.getFullYear()); // 2024
+// console.log(newDate.getMonth());  // 0
+// console.log(newDate.getMonth() +1);  // 0
+
+
+newDate.toLocaleString('default', {
+    weekday: "long",
+    
+})
+
