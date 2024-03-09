@@ -1,0 +1,247 @@
+
+/** Hoisting= > JavaScript Hoisting refers to the process whereby the interpreter appears to move the declaration of 
+  functions, variables, classes, or imports to the top of their scope, prior to execution of the code.  
+
+  without throwing a ReferenceError, but the value is always undefined. ("Declaration hoisting")
+
+  Hoisting is a concept that enables us to extract values of variables and functions even before initializing/assigning 
+  value without getting errors and this happens during the 1st phase (memory creation phase) of the Execution Context.
+
+  imp => hoisting refrence to in which we can Access function and variable even before initializations without any error.
+  we can put access 
+
+    https://www.youtube.com/watch?v=Fnlnw8uY6jo 
+
+  Note: = > when we decleare a variable in global scope we can access anywhere like Block and functional scope
+ 
+  let name="hello"
+   
+  {
+    console.log(name)   // possible
+  }
+
+  function myf(){ 
+    console.log(name) 
+  }
+  
+   But But But we can not access Block scope ({}) and Functional scope variable in global scope   // Var - Exception
+
+   {
+    let name="hello"
+  }
+
+ console.log(name)   // not possible
+
+ **/
+
+
+// myf1()  // 
+
+/** like  { var value ; 
+ console.log(value);} **/
+
+ // console.log(value);  undefiend 
+ 
+// var value= 45
+
+// function myf1(){
+//     console.log("Hello world");
+// }
+
+
+
+// [var name;(Assume)]
+// console.log(name);
+// var name = 'Mukul Latiyan';
+// console.log(name);
+
+
+
+
+// var value = 78
+
+// function myf1(){
+//   // [var name; // Assume]
+//   console.log(value);
+//   var value= 45
+// }
+// myf1()    
+
+
+
+// ////// //// //// //
+
+//var name; (assume)
+// console.log(name);   // undefiend
+// // let name= "hello"
+// var name= "hello";
+// console.log(name); // hello
+
+
+////////////////////////// discuss ////////
+
+// myf()
+// var name="hello"
+
+// function myf(){
+//   console.log(name);
+//   console.log("hello world");
+// }
+
+//////////////////////////////////
+
+// function-declerations assume here
+// myf()
+// const name = "hello" // ye access  nhi hoga
+
+// function myf() {
+//   console.log(name);
+//   const name = "hey"
+//   console.log("hello world");
+// }
+
+
+// function experasations
+
+
+// const value = function myf(){
+//   const value1=45
+//   console.log("hello world");
+//   console.log(value1);
+//   return value1
+// }
+// console.log(value());
+
+
+
+// console.log(score());   // score is not a function   / experations functions are not be hoisted
+
+// // [var score; ]   //(asume)
+// console.log(score);    // as a varible hoisting is work 
+
+// var score = () =>{
+//   const score1=45
+//   console.log("hello world");
+//   console.log(score1);
+//   return score1
+// }
+
+
+
+
+
+
+//// extera ************************************// scoping
+
+// function myf1(){
+//   // [var name;] // Assume]
+//   console.log(name);
+// }
+// myf1()
+
+// {
+//   var name="hello"
+// }
+
+
+
+//   myf()     // hello world
+
+// function myf(){
+//   let name= "hey"
+//  console.log("hello world");
+// }
+
+// Note: - The function expressions ( = ) and arrow functions cannot be hoisted.
+
+// console.log(value()); // cannot  access 
+
+// const value =()=>{
+//   console.log("hello world");
+// }
+// console.log(value);  // [Function: value]
+// console.log(value());  // hello world
+
+
+
+// value()   //value is not a function
+// console.log(value()); // value is not a function
+
+// console.log(value);    // undefined     //        // IMportant
+
+//  var value =()=>{
+//   console.log("hello world");
+//  }
+ 
+ // value is not function , value behave just like another variable
+
+
+// console.log(value1());
+
+// const value1 = function myf() {
+//   console.log("hello world");
+// }
+
+
+// const x = 1;
+// {
+//   console.log(x); // ReferenceError  // Cannot access 'x' before initialization
+//   const x = 2;
+// }
+
+
+// var y = 1;
+// {
+//   console.log(y); // 1
+//   var y = 2;
+// }
+
+// var z = 1;
+// function myf(){
+//   console.log(z);
+//   var z = 2;
+// }
+// myf()
+
+
+//////////////////////// setTimeout() 
+
+// setTimeout(() => {
+//   var name="hello"
+//   console.log(name);
+// }, 1000);
+
+// setTimeout(() => {
+//   var name="hello"
+//   console.log(name);
+// }, "10000");
+
+
+// setTimeout(()=>{
+//   console.log("3");
+// } ,5000)
+
+// setTimeout(()=>{
+//   console.log("2");
+// } , 3000)
+
+// setTimeout(()=>{
+//   console.log("1");
+// },1000)
+
+
+// setInterval(()=>{
+//   console.log("5");
+// },1000 ) 
+
+
+
+// const intervalID = setInterval(myCallback, 5000, "Parameter 1", "Parameter 2");
+
+// function myCallback(a, b) {
+//   // Your code here
+//   // Parameters are purely optional.
+//   console.log(a);
+//   console.log(b);
+// }
+
