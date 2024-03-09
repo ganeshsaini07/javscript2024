@@ -1,0 +1,94 @@
+
+ //  Execution context and call stack 
+
+// javascript execution context == jo be js ki file hoti h use js excute kese kregi 
+// java script execuate code in 2 phase 
+// 1.Global execution context (--- this) 
+// sabse phle global execution context banta h and fir usse "this" variables me rakh diya jata h
+           //  global execution context 2 type ke hote h 
+          // (i) browser  -- browser ke ander this ki value "window object" aati h
+          // (ii) Node Environment --- this 
+
+// == >2. Function execution context
+// == >3. Eval execution context    // not imp.  
+
+// this => jese browse ke adnder window object hota h usi tarh node enviroment ke ander this object hota h 
+ 
+ // java script execuate code in 2 phase = (Global execution context (--- this))
+//--1  Memorey creation phase    ( variables , decleartions ,functions) inko memorry me rek diya jata h
+//--2  Execution phase  (Mathacials function like - {+ ,- , X }) / code execuate hota h 
+
+
+
+// 1.sabse phle code globel execution se run hota h fir code ko this variable me rakh diya jata h == > Every code //ye to hona hi h
+// 2. Memorey creation phase=.> isme code ke sare variables ko ek jagh krke rakha jata h
+
+// https://www.youtube.com/watch?v=gSDncyuGw0s&list=PLlasXeu85E9cQ32gLCvAvr9vNaUccPVNP&index=5 =>functions Excutions context
+
+// Example:- how to run Execute
+
+//  let val1= 10 
+//  let val2= 5
+//  function addNum(num1, num2){
+//     let total = num1+num2
+//     return
+//  } 
+//  let result1 = addNum(val1 ,val2)
+//  let result2 = addNum(10 ,2)
+
+ /**
+  1. global Execution hoga == >code ko this variables me rek diya jayega
+
+  2. Memorey  creation phase => ( Variable environment )
+  val1 => undefined
+  val2 => undefined 
+  addNum  => definection of function   // function  // {...}
+   result1 => undefined 
+   result2 => undefined
+ 
+   3. Execution phase = >  (excutions thread)
+    val1  < === 10
+    val2  < === 5 
+    addNum == > (new Variable environment)  (function humesa new Environment create krta h) 
+     result1 == > 15
+     result2= same excute hoga 
+
+
+  */
+
+
+
+
+    {// (new Variable environment)  global Execution ek bar hi hota h 
+     /*
+     2/ Memorey creation phase 
+      val1 => undefined
+      val2 => undefined 
+      total => undefined 
+
+    3/ Execution phase =>
+       num1  < ==  10
+       mum2  < == 5
+       total  == > 15
+     */}
+
+
+// functions excutions  // https://www.youtube.com/watch?v=gSDncyuGw0s&list=PLlasXeu85E9cQ32gLCvAvr9vNaUccPVNP&index=5
+
+let value = 7
+
+myf1()
+myf2()
+console.log(value);
+
+function myf1(){
+   let value = 45
+   console.log(value);
+}
+
+function myf2(){
+   let value = 18
+   console.log(value);
+}
+
+// callstack()
