@@ -1,0 +1,251 @@
+
+// let and const are hoisted but its memory is allocated at other place than window which cannot be 
+// accessed before initialisation.
+// WINDOW object
+
+// function myf1() {
+//      var a ="hey"
+// }
+// console.log(a);  
+
+
+// console.log(name);
+// var name="ram" 
+// // before initialization  
+// // aftter asign 
+
+
+
+// console.log(value);
+// var value=100
+
+
+// // let b = 23
+// var b= 34
+// const b =89
+
+
+// Non-primitive data types == store multipal value (heap memorry)
+// object
+// Arrays
+
+// primitive data types  == store single value  (stack memorry)
+
+// NNSSBBU
+// Number  = 23,45
+// Null = standloan value
+// symbol= for uniquness  // function // symbol()
+// string ="" , ''
+// bigInt = 2 ki power 53 se badi value / big numric
+// Boolean = value true / false 
+// undefiend = let a;  // varial decleared but value not assign
+
+
+// let str = "hello"
+// console.log(typeof str); 
+
+// let num = 45
+// console.log(typeof num);
+
+// let a= null
+// console.log(a);  // null
+// console.log(typeof a); // object
+
+// let b = BigInt(875845553)
+// console.log(b);       /// 875845553n
+// console.log(typeof b); ///// bigint
+
+// let c= Symbol("ram")
+// console.log(c);    // Symbol(ram)
+// console.log(typeof c); // Symbol   
+
+//  let d= true || false
+//  console.log(d);   // true  
+//  console.log(typeof d);
+ 
+//  let e = undefined
+// console.log(e);   // undefiend
+// console.log(typeof e);  // undefiend
+
+
+
+
+
+///////////
+// let num = 89
+// console.log(typeof num);
+
+// let strNum= String(num)
+// console.log(typeof strNum);
+
+
+// let str=56
+// console.log(typeof str);
+
+// let strtoNum=Boolean(str)
+// console.log(strtoNum);
+
+
+// let str = "123abc"
+// // console.log(str);
+// // console.log(typeof str); 
+
+// let strtoNum = Number(str)
+// console.log(strtoNum);     // NaN
+// console.log(typeof strtoNum);  // number 
+
+// let value =  null 
+// let score = Number(value)
+// console.log(score);   // 0 
+// console.log(typeof score);
+
+// let value = true
+// let score =Number(value)
+// console.log(value);  // true
+// console.log(typeof value);  // boolean
+
+// console.log(score); // 1
+// console.log(typeof score); // number
+
+
+// let value= false;
+// let score = Number(value)
+// console.log(score);
+// console.log(typeof score);
+// console.log(typeof value);
+
+
+// non primitive data type // refrence 
+
+// Array 
+// Function 
+// Object 
+
+// const Array =[ 24 , "hey" , 34]
+
+// const myObj= {
+//      name:"hello",
+//      id:45
+// }
+// const myFunction= function(){
+//      console.log("hey");
+// }
+
+// console.log(typeof Array);
+// console.log(typeof myObj);
+// console.log(typeof myFunction);
+
+
+// stack and heap memorry
+
+// stack memorry (primitive data type) ;- jb be stack memorry use hoti h to hume humesha variables ki copy milti h 
+// The stack is used to store static data
+
+// heap memorry (non-primitive data type) :- jb heap memorry use hoti h to hume original value ka refereance milta h
+//heap is used to store dynamic data
+
+
+// stack example
+let email="hello@gmail.com"
+
+let newEmail=email
+
+newEmail = "hey@gmail.com"
+
+// console.log(email);
+// console.log(newEmail);
+
+
+
+// heap example
+
+let obj={
+    name:"hey",
+    age:20
+}
+ 
+let newObj=obj
+ 
+newObj.name="hello"
+
+console.log(newObj.name);
+console.log(obj.name);
+
+//2 
+
+
+
+
+
+
+
+
+//++++++++++++++++++ { a++ , ++a}  ++++++++++++++++
+
+// 1. Arithmatic Operator  = > + , -  , * , % , a++ , a--
+
+//  let a= 10
+// console.log(a++); // 10
+// console.log(a);  // 11
+
+// let b= 15
+// console.log(b);
+// console.log(++b);
+// console.log(b);
+
+
+// let c= 10
+// console.log(c);  // 10
+// console.log(c++); // 10 // phle print fir value 11 hogi
+// console.log(++c);  // 12
+// console.log(c--); // 12 
+// console.log(--c); //10
+
+
+
+
+
+//++++++++++++++++++ { a++ , ++a}  ++++++++++++++++
+
+// 1. Arithmatic Operator  = > + , -  , * , % , a++ , a--
+
+//  let a= 10
+// console.log(a++); // 10
+// console.log(a);  // 11
+
+// let b= 15
+// console.log(b);
+// console.log(++b);
+// console.log(b);
+
+
+// let c= 10
+// console.log(c);  // 10
+// console.log(c++); // 10 // phle print fir value 11 hogi
+// console.log(++c);  // 12
+// console.log(c--); // 12 
+// console.log(--c); //10
+
+
+
+// 2. Assignment operator
+  
+// a+=2 // a= a/2
+
+
+// 3. Comprasion operator
+
+// == 
+// !=
+// ===
+//!==
+//
+
+//  let a = "6"
+//  let b= "6"
+// //  console.log(a==b);  
+// // console.log(a!=b);   
+// // console.log(a===b);
+// console.log(a!==b);
+
+
