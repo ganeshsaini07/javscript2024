@@ -1,0 +1,135 @@
+
+// for of=> print values of aarys,string.......   // not print object keys value we can print use Object.keys()
+           // major use for Array
+
+// example 
+
+ const arr=["hello" , 1,2,4,5]
+
+
+ // old way
+//  for(let i=0 ; i<arr.length; i++){
+//     console.log(i);   // index value 0,1,2,3,4 print hogi 
+//     console.log(arr[i]);    // value print hogi 
+//  }
+
+// morden way 
+//  for(let i of arr){
+//     console.log(i);  // value aayegi  , hello ,1,2,4,5
+//     console.log(typeof i);  // try 
+    
+//  }
+
+// for(let i in arr){
+//     console.log(i);   // 0 ,1 ,2 ,3 ,4
+// }
+
+////////////////////////////////
+
+const media={
+    yt:"youtub",
+    fb:"facebook"
+}
+
+// for( let i of media ){
+//     console.log(i);
+// }     // error =>  TypeError: media is not iterable   // because 
+
+// second type for access
+
+for(let i of Object.keys(media)){
+   console.log(i);   // yt , fb  ( up ,down)
+}
+
+for (let i of Object.values(media)){
+    console.log(i);   // youtub ,facebook
+}
+
+
+// for using of object for best way of for in loop  
+
+
+
+
+// for in => print index of array , objects key 
+          // major use for Object 
+
+
+
+// const value=[1,2,3,4,5,6]
+
+// for (const i of value) {
+//     console.log(i);
+// }
+
+// const greeting="hello world"
+
+// for (const greet of greeting) {
+//     console.log(`each charactor ${greet}`);
+// }
+
+/**
+ each charactor h
+each charactor e
+each charactor l
+each charactor l
+each charactor o
+each charactor
+each charactor w
+each charactor o
+each charactor r
+each charactor l
+each charactor d
+ */
+
+
+// maps 
+
+// const map = new Map()     // type of object
+
+// map.set('IN' , "India")
+// map.set('USA' , "united state of america")
+// map.set('FR' , "france" )
+
+// console.log(map);
+
+// Map(3) {
+//   'IN' => 'India',
+//   'USA'=> 'united state of america',
+//   'FR' => 'france'
+// }
+
+// for (const i of map) {
+//     console.log(i);
+// }
+ 
+//[ 'IN', 'India' ]
+// [ 'USA', 'united state of america' ]
+// [ 'FR', 'france' ]
+
+// for (const [key , value] of map) {
+//     console.log(key , ':-' , value);
+// }
+
+// for(const [key] of map){
+//     console.log(key);
+// }                          // optput => IN , USA, FR    
+
+// IN :- India
+// USA :- united state of america
+// FR :- france
+
+
+// const myObject={
+//     name:"hello",
+//     age:23
+// }
+
+// for (const key of myObject) {
+//     console.log(key);
+// }
+
+// TypeError: myObject/object is not iterable  // but maps are itetable   // we can use for in loop for ittrate of object 
+
+
+// for the solutions of to object iterable we can use for in loop
