@@ -133,3 +133,98 @@ each charactor d
 
 
 // for the solutions of to object iterable we can use for in loop
+
+
+
+// extra 
+
+
+
+// loops 
+
+// const arr=["hello" ,4 , 7 ,9 ,3]
+
+// // for( let i=0 ; i<arr.length ; i++ ){
+// //     console.log(i);
+// //     console.log(arr[i]);
+
+// // }
+
+// // for of // value print 
+// for in => index of aaray , keys of object print krta h 
+
+// for( let i of arr){
+//     console.log(i);
+//     console.log(i.length);
+
+    // // i<arr.length;
+    // // i++;
+
+    // console.log(arr[i]);
+   
+// }
+
+
+// for in
+
+
+// const arr=["hello" ,4 , 7 ,9 ,3]
+
+// for (const i in arr) {
+//     console.log(i);
+//     // console.log(arr[i]);
+// }
+
+
+
+// for of and for in loop on object
+
+
+// const myObj={
+
+//     fn:"full name",
+//     ln: "last name",
+//     yt: "youtub"
+// }
+
+
+// console.log(myObj[0]);    // undefined
+
+// for(let i=0 ; i<myObj.length; i++){
+//       console.log(i);
+// }
+
+// i<myObj.length  => false 
+
+// for(let i=0 ; i<Object.keys(myObj).length; i++){
+//     // console.log(i);
+    
+//     //  console.log(myObj[i]);
+
+//      const element=Object.values(myObj)
+//      console.log(element);
+// }
+
+
+const myObj={
+
+    fn:"full name",
+    ln: "last name",
+    yt: "youtub"
+}
+
+// for( let a of myObj){
+//     console.log(a);
+// }
+
+// TypeError: myObj is not iterable
+
+// for(let a of Object.keys(myObj) ){
+//     console.log(a);
+// }
+
+// easy  for in 
+  
+for (let a in myObj){
+    console.log(a);
+}
