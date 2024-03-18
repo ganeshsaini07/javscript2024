@@ -1,0 +1,215 @@
+
+//    Dom:-  [ for best dom =JavaScript DOM Crash Course - Part 1 = on-youtub]
+
+// 1.document.querySelector()
+// 2.document.getElementById()
+// 3.document.getElementsByClassName()
+// 4.document.getElementsByTagName
+// Node: childNodes 
+// Node
+// nodelist
+// document.createTextNode("this is my Div")
+
+// document.querySelector('h1').innerHTML // inner html give all text node in h1 tage with element tags
+// document.querySelector('h1').innerText // inner text giving only text in h1 element  if h1 elemnt have any display none content 
+//                                         //this method will return only visible text 
+// document.querySelector('h1').textContent// this is return all text content include display none/hidden 
+
+// <h1 id="heading" class="hello">this is my frist heading <span> this is my span</span></h1>
+// <h2 id="heading1">this is my frist heading</h2> 
+
+// // in console
+
+// const title = document.getElementById('heading')   // h1 element store in veribal
+
+// title //  <h1 id="heading" class="hello">this is my frist heading</h1>
+// title.style.backgroundColor='gray'
+// title.style.color='white'
+// title.innerHTML    //this is my frist heading <span> this is my span</span> // its return all text with inclode inner element tags
+// title.innerText    //  return visible text
+// title.textContent  // return all text in h1 tags
+
+// document.querySelector('h2')         //  <h2 id="heading1">this is my frist heading</h2> 
+// document.querySelector('.hello')     // <h1 id="heading" class="hello">this is my frist heading <span> this is my span</span></h1>
+// document.querySelector('#heading1')  // <h2 id="heading1">this is my frist heading</h2> 
+
+// document.querySelector('.head2').style.backgroundColor='green' // we can this type 
+
+
+// example:- [dom.html]
+
+// <ul>
+//     <li>one</li>
+//     <li>two</li>
+//     <li>three</li>
+// </ul>
+
+// console   //[querySelector]
+
+// document.querySelector('ul')
+// <ul>​…​</ul>​
+
+// const myul=document.querySelector('ul')
+// undefined
+
+// const myol= myul.querySelector('li')  // when li are multipal then case queryselector all select index value of 0 / frist element
+// undefined
+
+// myol.innerHTML
+// 'one'
+// myol.innerText
+// 'one'
+// myol.textContent
+// 'one'
+// myol.innerText='forth'   // set inner text value forth and replace into of One
+// 'forth'
+// myol.textContent='sixth'
+// 'sixth'
+// myol.innerHTML='<h1>this is my heading</h1>'
+// '<h1>this is my heading</h1>'
+
+
+// //[querySelectorAll ]  querySelectorAll getting nodelist always // myh1[0]
+
+// document.querySelectorAll('li')
+// NodeList(3) [li, li, li]0: li1: li2: lilength: 3[[Prototype]]: NodeList
+// const list= document.querySelectorAll('li')
+// undefined
+// list
+// NodeList(3) [li, li, li]0: li1: li2: lilength: 3[[Prototype]]: NodeList
+// list.style.color='red'
+// VM2805:1 Uncaught TypeError: Cannot set properties of undefined (setting 'color')
+//     at <anonymous>:1:17
+// (anonymous) @ VM2805:1
+// list[0].style.color='red'
+// 'red'
+// list[2].style.color='red'
+// 'red'
+// list[1].style.color='purpole'
+// 'purpole'
+
+// //this is possible
+
+// [myh2.forEach(function(h2){
+//     h2.innerHTML='<h1>this is my country</h1>'
+// })]   
+
+
+// IMP  //    how to select all element through the querySelectorAll() 
+//            this is not arrays but its seems like array and we can use only forEach() not map()
+//            this is nodelist and we can use only forEach()
+
+// const list= document.querySelectorAll('li')
+// undefined
+// list
+// NodeList(3) [li, li, li]
+// list.forEach(function (li){
+//     li.style.backgroundColor='hotpink'
+// })                     
+//     // this is way when we use style all inner element 
+
+// undefined
+// list.forEach(function (li){
+//     li.style.color='white'
+// })
+
+
+// [document.getElementsByClassName]    it is html collections and we can not use any functions on this method if 
+//                                      i want to use and run function we can convert the array  
+//                                       through the Array.from(varibal name)
+
+//   this mathod gives always html collections
+
+//  <ul>
+//     <li class="list-item">one</li>
+//     <li class="list-item">two</li>
+//     <li class="list-item">three</li>
+//     <li class="list-item">Forth</li>
+// </ul>
+
+
+// document.getElementsByClassName('list-item')
+// HTMLCollection(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+
+// const myli= document.getElementsByClassName('list-item')
+// undefined
+
+// myli
+// HTMLCollection(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+
+// Array.from(myli)
+// (4) [li.list-item, li.list-item, li.list-item, li.list-item]
+
+// const myNewli= Array.from(myli)   // we can use Array.from() method to convert html collection to node list
+// undefined
+
+// myNewli
+// (4) [li.list-item, li.list-item, li.list-item, li.list-item]0: li.list-item1: li.list-item2: li.list-item3: li.list-itemlength: 4[[Prototype]]: Array(0)
+
+// myNewli.forEach(function(l){
+//     l.style.backgroundColor='red'
+// })
+// undefined
+
+// myNewli.forEach(function(l){
+//     l.style.color='white'
+// })
+// undefined
+
+// myNewli.forEach(function(l){
+//     l.style.fontSize='40px'
+// })
+// undefined
+
+// myNewli.forEach(function(l){
+//     l.style.padding='10px 0'
+// })
+// undefined
+
+// myNewli.forEach(function(l){
+//     l[0].style.margin='10px 0'
+// })
+
+
+
+// [ // New element in dom ] if we have a one div and her class is parent 
+
+//  <div class="parent">
+//         <div class="oneNum">one</div>
+//         <div class="twoNum">Two</div>
+//         <div class="threeNum">Three</div>
+//         <div class="forthNum">Forth</div>
+//     </div> 
+
+// parent.children[1]
+// parent1.firstElementChild
+//  console.log(oneNum.parentElement)
+//   console.log(oneNum.nextElementSibling); 
+//   console.log(parent.childNodes);
+//   console.log(twoNum);
+
+// example:-
+// const myh1=document.createElement('h1')
+//   myh1
+// <h1>​</h1>​
+// const myText=document.createTextNode('This is my india')
+// undefined
+// myText
+// "This is my india"
+// myh1.appendChild(myText)
+// "This is my india"
+// document.body.appendChild(myh1)
+// <h1>​This is my india​</h1>​
+
+
+
+
+
+
+// function myf1(){
+    
+// }
+
+// addEventlistner('click' ,)
+
+// 
