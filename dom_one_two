@@ -1,0 +1,102 @@
+
+<!-- How to create a new element in DOM -->   chai or code => dom one & two.html
+<!-- Question => diffrence between html collection and node list in javascript -->  
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document object model</title>
+    <style>
+        body {
+            background-color: rgb(59, 58, 58);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+      
+
+    <!-- // Html collection -->
+
+    <div class="week">   
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">thrusday</div>
+
+    </div>
+</body>
+<script>
+
+//   const weeks=document.querySelector('.week')
+// //   console.log(weeks);
+// //   console.log(weeks.children[0]);   //   <div class="day">Monday</div>
+// //   console.log(weeks.children[1].innerHTML);   // Tuesday
+  
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// const weeks=document.querySelector('.week')
+
+// for( let i=0 ;i<myweek.length ; i++){
+//       console.log(myweek[i]);
+//     }     // this code in not running beacuse myweek / week is not array it is html collection and 
+//            //condistion false h to loop kabhi run nhi hoga 
+    
+
+// for(let i=0;i<weeks.children.length;i++){
+
+//     // console.log(weeks.children[i]);   // print all html collection with element tag (<div class="day">Monday</div> .........) of week class element 
+
+//     // console.log(weeks.children[i].innerHTML);  // output every week of childen inner html print  > monday ,tuesdau.............
+// }
+
+///+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// How to move parent to child --  firstElementChild
+
+// const weeks=document.querySelector('.week')
+
+// weeks.style.color="red"  // all text node are will be become red color 
+
+// weeks[1].style.color="green"   // error / because this is not a aarrya week in html collection
+
+// weeks.children[1].style.backgroundColor="sky"
+
+// console.log(weeks.firstElementChild);
+// console.log(weeks.lastElementChild);
+
+// moving child to parent 
+
+// const myDay=document.querySelector('.day')
+
+// // console.log(myDay);   //   <div class="day">monday</div>
+
+// // console.log(myDay.parentElement); // access of parent
+
+// console.log(myDay.nextElementSibling);   // <div class="day">Tuesday</div>
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+const weeks =document.querySelector('.week')
+
+ console.log(weeks.childNodes);  // NodeList(9) [text, div.day, text, div.day, text, div.day, text, div.day, text]
+
+ // childNodes => its count all tree structure of dom
+ // space and line break = > text node
+ //  
+
+
+  
+//   extra ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// const days=document.querySelectorAll('.day')
+// console.log(days);
+
+// days.forEach((i)=>{
+//   i.style.backgroundColor="red";
+//   i.style.color="green";
+// })
+
+</script>
+</html>
