@@ -1,0 +1,34 @@
+
+//Next: youtube
+// JavaScript Event Bubbling and Propagation
+// JavaScript Events
+// 1/29
+// javascript is sequenceelly run language , ye humesa ek sequense me use hoti h
+
+// Events:- // browser Events and Envirovment event
+// Events are invoke browser activity like mouse press/click, keyboard press
+//click event 
+//keyboard event  
+
+//type
+//timestamp  - for date Activity 
+//defaultPrevented 
+//target
+//toElement
+//srcElement
+//currentTarget
+//clientX ,clientY
+//screenX ,screenY
+//altKey ,ctrlKey ,shiftKey ,keyCode
+
+
+
+// false yha bydefault hota h
+// event propagation bubbling and capturing 
+//event propagation bubbling (bubble humesa niche se upr jata h)
+// inner element to outer element // inside to outside  
+//Event-bubbling :-      bottom => Top  // default // image>a>li>ul   // false 
+   // jo be apni script track krrehi h bde element ko  inside se outside yhi  event propagation hota h
+// Event-captureing :-  Top    => bottom       // ul>li>a>image  // true
+
+// e.stopPropagation() for stoping propagation
