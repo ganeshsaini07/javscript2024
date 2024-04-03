@@ -32,3 +32,126 @@
 // Event-captureing :-  Top    => bottom       // ul>li>a>image  // true
 
 // e.stopPropagation() for stoping propagation
+
+one.html////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #212121;
+            color: beige;
+        }
+        ul li img{
+            width: 30%;
+        }
+        ul li{
+            color: azure;
+        }
+        ul li a{
+            color: azure;
+        }
+    </style>
+</head>
+<body>
+    <h2>Collection of good images</h2>
+    <ul id="images">
+        <li><img src="images/car.jpg" alt="" id="car"></li>
+        <li><img src="images/cycle-home.jpg" alt="" id="cycle"></li>
+        <li><img src="images/nature-road.jpg" alt="" id="nature"></li>
+        <li><img src="images/sea-water.jpg" alt="" id="sea"></li>
+        <li><a id="google" href="https://google.com" target="_blank">google</a></li>
+    </ul>
+    
+</body>
+<script>
+    //onclick function are not given more information so we use Events
+//  document.getElementById('cycle').onclick=function(){
+//     alert('this is my cycle')   
+//  }
+
+//  Events
+
+// type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode*/
+
+// document.getElementById('car').addEventListener('click',function(){
+//     alert('this is my Car!')
+// })
+
+// /Note:-/ when we pass function in Event then not call the function only pas the function 
+//attachEvent()
+//jQuery- .on
+
+// const myCar=document.getElementById('car').addEventListener('click', myf)
+// function myf(){
+//     alert('this is my car!')
+// }
+
+// document.getElementById('car').addEventListener('click', function(A){
+//    console.log(A);
+// },false)   // bydefaulte = false 
+
+
+/*******************/// event propagation bubbling and capturing 
+
+// const myImages=document.getElementById('images')
+// myImages.addEventListener('click' ,function myf3(){
+//     console.log("clicked inside the images")
+// },true/false)
+
+// const myCycle=document.getElementById('cycle')
+// myCycle.addEventListener('click',function myf4(){
+//     console.log("Don't tauch my cycle");
+//     // e.stopPropagation()
+// },true/false)
+
+
+// false yha bydefault hota h
+// event propagation bubbling and capturing 
+//event propagation bubbling (bubble humesa niche se upr jata h)
+// inner element to outer element // inside to outside  
+//Event-bubbling :-      bottom => Top  // default // image>a>li>ul   // false 
+   // jo be apni script track krrehi h bde element ko  inside se outside yhi  event propagation hota h
+// Event-captureing :-  Top    => bottom       // ul>li>a>image  // true
+
+// e.stopPropagation() for stoping propagation
+
+
+/**************************/
+// when we click google link then we don't want that url are goes to google then use preventDefault()
+//  document.getElementById('google').addEventListener('click',function myf5(a){
+//    a.preventDefault()
+//  } ,false)
+ /******************/
+// in this case we are click ul then ul are remove but we want only li remove when i clicked li
+// document.querySelector('#images').addEventListener('click',function(e){
+//    console.log(e.target.parentNode) ;
+//    const removeElement=e.target.parentNode;
+//    removeElement.remove()
+// //    removeElement.parentNode.removeChild(removeElement)
+// })
+
+
+// but we want only li remove when i clicked li
+
+document.querySelector('#images').addEventListener('click', function(b){
+    // console.log(b.target.tagName)
+    if (b.target.tagName === 'IMG') {
+        const removeIs=b.target.parentNode;
+        removeIs.remove()
+    }
+})
+
+
+
+</script>
+</html>
+
+
