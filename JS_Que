@@ -1,0 +1,38 @@
+
+
+https://codepen.io/lalwanivikas/pen/eZxjqo
+
+ Que 1 . String 
+ slice(),substr(),substring() me deffrience
+ ANS . https://www.tutorialspoint.com/difference-between-string-slice-and-substring-methods#:~:text=Here%2C%20as%20the%20end%20index,%2C%20it%20returns%20'Good'.
+
+ Slice method = > 
+  .It returns a part of the string
+  .It allows negative indexing and returns string counting from back
+  .If start index is greater than the end index, it returns an empty string (5 , 3)
+
+ Substring method => 
+
+
+Que 2.*How JavaScript works?
+
+Ans-Everything in JavaScript happens inside an "execution context".
+
+Execution context has two component
+1)memory component[variable environment] 
+-This is the place where all variables and functions are stored as key value pairs. eg-{key: value ||  n:2;} 
+
+ 2)code component[Thread of execution]
+-This is the place where code is executed one line at a time
+
+Note-
+*JavaScript is a synchronous single-threaded language
+
+-Single threaded means JavaScript can execute once command at a time
+-Synchronous single-threaded that means JavaScript can execute one command at a time in a specific order.
+
+
+
+Que . 1.for vs while loop
+      2.If else If vs switch case usecase  
+    
