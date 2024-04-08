@@ -1,0 +1,73 @@
+
+// map , reduce and filter are higher oder arrays function 
+
+// map => arrays ke each element pr maping ke liya map mathod ka use kiya jata h 
+// aaray ke each elemnt pr koi be action task perform ke liye and new upadted arryas ke liye map mathod ka use kiya jata h 
+
+// Example
+
+const num = [1,2,3,4,5,6,7,8,9]
+
+const numMap=num.map((item)=>{
+     return item+1
+})
+console.log(numMap);
+
+
+// filter => array ko condistion ke base pr filter krna 
+
+const numFilter=num.filter((item)=>{
+    return item/2==4
+    return item + 1
+
+})
+console.log(numFilter);
+
+
+// reduce  = > arrays ko rduce krna isme output value ek hi aati h
+
+const num1 = [1,2,3,4,5]
+
+const numReduce=num1.reduce((preval,curval)=>{
+    return preval+curval
+})
+
+console.log(numReduce);
+
+
+
+// map // reduce // filter 
+
+// map => arrya ke each element pr mapinng ke liye 
+// array ke each element pr koi task perform krke new arrays print karvane k liye 
+
+// const num=[1 ,2 ,4 , 6, 8]
+
+
+// const numMap=num.map((item)=>{
+//      return item=item*4
+// })
+
+// console.log(numMap);
+
+// filter= > array ko condistion ke base pr filter krne ke liye 
+
+// const numFilter=num.filter((item)=>{
+//    return item>4
+// })
+
+// console.log(numFilter);
+
+
+// reduce
+
+// const num=[1 ,2 ,4 , 6, 8]
+
+// const numReduce= num.reduce((curval, nexval)=>{
+
+//     console.log(curval,nexval);
+
+//          return curval+nexval
+// })
+
+// console.log(numReduce);
