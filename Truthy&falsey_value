@@ -1,0 +1,63 @@
+
+
+// const userMail = "gs@email.com"   // You have a email
+
+// const userMail = ""  // false 
+// const userMail = []  // true //  empty Array // to man liya gya ki isme value h //true
+// if (userMail) {
+//     console.log("You have a email");
+// }
+// else{
+//     console.log("please make your email id");
+// }
+
+
+// falsy values 
+
+// [ false , 0 , -0 , BigInt 0n, "" , null , Undefined , NaN ]
+
+// truthy values 
+//  " " (spaceable string) , [] , {} , 'false' , function(){} , "0" 
+
+
+// Q - How to check empty array 
+
+// const userMail = []
+// if (userMail.length === 0) {
+//     console.log("this is empty array");
+// }
+
+// // Q - How to check empty object
+
+// const name = {}
+// if (Object.keys(name).length === 0) {
+//     console.log("this is empty object");    
+// }
+
+// false == 0 // true 
+// false == '' // true
+// 0  == ''    // true
+
+
+// Nullish Coaleshing Operator  (??)  : null , undefined 
+
+//  let value ;
+// //  value = 5 ?? 10
+// //  value = null ?? 10
+// // value = undefined ?? 20
+// //  value = null ?? 10 ?? 20
+
+//  console.log(value);
+
+
+//  // Terniary Operator 
+    
+//  // condition   ? true : false 
+
+// //  const coursePrice = "1000"
+// //  coursePrice <= 900 ? console.log("price less then 900") : console.log("price more then 900");
+
+
+
+
+
