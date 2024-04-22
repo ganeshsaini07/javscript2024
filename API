@@ -1,0 +1,21 @@
+
+//https://www.youtube.com/watch?v=pDPAcYdSse8
+
+// API request and V8 engine
+
+// Api(Application Programming Interface) =>
+
+// Api is talking lanauguage of 2 system. maybe there system have is backend and frontend , diffrenent-2 programming languages
+
+// API stands for Application Programming Interface. In the context of APIs, the word Application refers to any software with a distinct function. Interface can be thought of as a contract of service between two applications. This contract defines how the two communicate with each other using requests and responses. Their API documentation contains information on how developers are to structure those requests and responses.
+
+//APi provide  => protocol and which data send and recive other programm
+//ex.=>if i have  a project/program. frontend make= js language, and backed= python lang, in this case both of language comminucate
+// through the API
+
+
+// github APi access => https://api.github.com/users/ganeshsaini07
+
+// random Api => https://randomuser.me/ 
+
+
