@@ -1,185 +1,48 @@
+/////https://www.programiz.com/javascript/promise#:~:text=Create%20a%20Promise&text=let%20promise%20%3D%20new%20Promise(function,resolve()%20function%20is%20called.
 
-//https://www.youtube.com/watch?v=NJwRQgsu1Q8&t=1778s
+// in this programme if i have gave a task , programme give a promise to complate as soon as.
 
-// when we create a promise also the create promise we need to cunsume
+//"I Promise a Result!"
 
-// create a promise(promisOne)
+// why needs promise => handle asynchronous operations
 
-// const promiseOne=new Promise(function (resolve,reject) {
+// "Producing code" is code that can take some time
 
-//     setTimeout(()=>{
-//         console.log("Asyn is complete");
-//         resolve()                             //// Note
-//     },1000)
+// "Consuming code" is code that must wait for the result
 
-// })
+// A Promise is an Object that links Producing code and Consuming code
 
-// // cunsume the promise   // then  connections => resolve
-// promiseOne.then(() => {
-//     console.log("promise is cunsumed");
-// })
+// if i want to access any file in programme ,in this case file is  not gave access directly, kernel take a responsabilty for
+// access to any file in networking system. we need to kernal for access of any files in any programming lanugauge.
+// for this issue very first we need to access of kernal
 
-// // Note :- in this case very first we need to connect .then()  and resolve , mathod of resolve()
+// promise is complete in future.
 
-// new Promise(function(resolve ,reject) {
-//     setTimeout(function(){
-//         console.log("asyn task 2");
-//         resolve()
-//     },1000)
-// }).then(function(){
-//     console.log("promise 2 is consumed");
-// })
+//In JavaScript, a Promise is an object that will produce a single value some time in the future. If the promise is successful, it will produce a resolved value, but if something goes wrong then it will produce a reason why the promise failed. The possible outcomes here are similar to that of promises in real life.
 
-// /// we can take value from the mathod of   .then() and
-// /// we can take the error value mathod of  .catch()
-
-// ///////////////////////////
-
-// const promiseThree= new Promise(function(resolve,reject){
-// setTimeout(function(){
-//          resolve({userName:"hello" , email:"example@gmail.com"})
-// },1000)
-// })
-
-// promiseThree.then(function(user){
-// console.log(user);
-// })
-// Input => { userName: 'hello', email: 'example@gmail.com' }
-
-///////////////////////////
-
-// const promiseFour = new Promise(function (resolve, reject) {
-//   setTimeout(function () {
-//     let error = false;
-//     if (!error) {
-//       resolve({ username: "hello", password: 32134 });
-//     } else {
-//       reject("Error:something went wrong");
-//     }
-//   }, 1000);
-// });
-
-// promiseFour
-//   .then(function (user) {
-//     console.log(user);
-//     return user.username;
-//   })
-//   .then(function (userName) {
-//     console.log(userName);
-//   })
-//   .catch(function (err) {
-//     console.log(err);
-//   })
-//   .finally(() => console.log("finally promise is either resolve or reject"));
-
-// in this promise if i want to error then we need to go the else statement (check the uper promisFour)
-//   and  check (let error = true/false)
-
-/// catch => to connect "reject"
-/// then  => to connect "resolve"
-
-/// second type of promiseFour
+/// for better   // https://www.programiz.com
 
 
 
-//////////////////////////////////////////////////////////////
 
-// const promiseFive = new Promise(function (resolve, reject) {
-//   setTimeout(() => {
-//     let error = true;     // also we need to try false for better understanding
-//     if (!error) {
-//       resolve({ userName: "js", score: 100 });
-//     } else {
-//       reject("error:js is wrong");
-//     }
-//   }, 1000);
-// });
+// promise have 3 states:
+// 1. pending   => 	undefined => While the value is not yet available  // After,it transitions to one of the two states: resolved or rejected 
+// 2. fullfiled  => a result value
+// 3. rejected  => an error object
 
-// async function cousumepromiseFive(){
-//   const response=await promiseFive
-//   console.log(response);
-  
-//   // error(condisition false) for upder code => [UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "error:js is wrong".] 
+//Imp
+// Browser dygram
+// Network call
+// fetch
+// .then
 
-//   // but if i try for condisition true let say  => let error = false (for true condistion) = try for 
-//   // input :- { userName: 'js', score: 100 }
-
-//   // note:- async await not handel directly error we need to try and catch(error)  
-// }
-
-// best type for 
-// async function cousumepromiseFive(){
-
-//   try {
-//     const response=await promiseFive
-//   console.log(response);
-//   } catch (error) {
-//     console.log(error);
-//   }
-//   // note:- async await not handel directly error we need to try and catch(error)  
-// }
-
-// // output: error:js is wrong
-
-// cousumepromiseFive()
-
-///////////////////////////////////////////////////////
-
-// fetch take always a url
-
-async function getAllusers(){
-
-  const response=await fetch('https://jsonplaceholder.typicode.com/users')
-  // console.log(response);  // try
-
-  const data=response.json()
-  console.log(data);   // input - Promise { <pending> }
-
-  //////////////////////////////////////////////////////////////////////
-
-  try {
-    const response=await fetch('https://jsonplaceholder.typicode.com/users')
-  const data = await response.json()
-  console.log(data);
-  } catch (error) {
-    console.log("something Error" , error);
-  }
-}
-// getAllusers()   // done
-
-///////////////////////second mathod through the .then   //////////////////////////////////////////
-
-fetch('https://jsonplaceholder.typicode.com/users')
-.then((response)=>{
-  return response.json()
-})
-.then((data)=>{
-      console.log(data);
-}).catch((error)=> console.log(error))
+// NOte:- Promise is object
 
 
-////////////////////////////// some extra for better understanding //////
-
-// this bloew code helps to understand to diffrence between .then(for true)  and .catch(false/error) please try and checkk the
 
 
-// const promise =new Promise(function(resolve,reject){
+//JavaScript Promise Chaining => Promises are useful when you have to handle more than one asynchronous task, one after another. For that, we use promise chaining.
 
-//   let value= true
-  
-//   if (value==true) {
-//     resolve({userName:"hello" , userValue:45})
-//   }
-//   else{
-//     reject("error:value is not found")
-//   }
-  
-//   })
-  
-//   promise.then(function(user){
-//     console.log(user);
-//   }).catch(function(a){
-//     console.log(a);
-//   }).finally(()=>{
-//     console.log(" value is either true or false ");
-//   })
+// JavaScript then() method => The then() method is used with the callback when the promise is successfully fulfilled or resolved.the then() method is used to chain the functions to the promise. The then() method is called when the promise is resolved successfully. You can chain multiple then() methods with the promise.
+
+// JavaScript catch() method[error] ===>  The catch() method is used with the callback when the promise is rejected or if an error occurs. For example, And the catch() method is used with a promise to handle the error.
